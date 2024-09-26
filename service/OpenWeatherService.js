@@ -42,14 +42,14 @@ module.exports = WeatherService;
 
 
 // Тестування сервісу
-(async () => {
-  try {
-    const cityWeather = await WeatherService.getWeatherByCity('Kyiv');
-    console.log('Weather in Kyiv:', cityWeather);
+// (async () => {
+//   try {
+//     const cityWeather = await WeatherService.getWeatherByCity('Kyiv');
+//     console.log('Weather in Kyiv:', cityWeather);
 
-    const coordinatesWeather = await WeatherService.getWeatherByCoordinates(50.4501, 30.5234);
-    console.log('Weather for coordinates [50.4501, 30.5234]:', coordinatesWeather);
-  } catch (error) {
-    console.error('An error occurred during service testing:', error);
-  }
-})();
+//     const coordinatesWeather = await WeatherService.getWeatherByCoordinates(50.4501, 30.5234);
+//     console.log('Weather for coordinates [50.4501, 30.5234]:', coordinatesWeather);
+//   } catch (error) {
+//     console.error('An error occurred during service testing:', error);
+//   }
+// })();
