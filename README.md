@@ -31,7 +31,11 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-
 node service/OpenWeatherService.js + розкоментуйте тестову частину сервіса
 
 ## methods
+'''
+const WeatherService = require('/path/OpenWeatherService.js')
+'''
 
+Погода за містом:
 ```
 WeatherService.getWeatherByCity(cityName)
 ```
@@ -41,6 +45,7 @@ example:
 ```
 const cityWeather = await WeatherService.getWeatherByCity('Kyiv');
 ```
+Погода за координатами:
 ```
 getWeatherByCoordinates(lat, lon)
 ```
