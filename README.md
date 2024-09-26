@@ -41,8 +41,11 @@ example:
 ```
 const cityWeather = await WeatherService.getWeatherByCity('Kyiv');
 ```
-
+```
 getWeatherByCoordinates(lat, lon)
-example: const coordinatesWeather = await WeatherService.getWeatherByCoordinates(50.4501, 30.5234);
-
+```
+example: 
+```
+const coordinatesWeather = await WeatherService.getWeatherByCoordinates(50.4501, 30.5234);
+```
 Функції асинхронні, тому не забувайте await
