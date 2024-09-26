@@ -31,9 +31,9 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-
 node service/OpenWeatherService.js + розкоментуйте тестову частину сервіса
 
 ## methods
-'''
+```
 const WeatherService = require('/path/OpenWeatherService.js')
-'''
+```
 
 Погода за містом:
 ```
