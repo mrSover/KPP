@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 import { WeatherService } from "../../service/WeatherService";
 
 export default {
