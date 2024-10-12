@@ -1,9 +1,9 @@
-const axios = require('axios');
+import axios from 'axios';
 
-OPENWEATHER_API_KEY = '3515522ce40225e94ec9b09d78ade6a4'
-OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
-WEATHERAPI_API_KEY = 'e6c7e289adaa4bb8886183549240510'
-WEATHERAPI_BASE_URL = 'http://api.weatherapi.com/v1'
+const OPENWEATHER_API_KEY = '3515522ce40225e94ec9b09d78ade6a4'
+const OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
+const WEATHERAPI_API_KEY = 'e6c7e289adaa4bb8886183549240510'
+const WEATHERAPI_BASE_URL = 'http://api.weatherapi.com/v1'
 
 class WeatherService {
   static async getWeatherByCity(cityName) {
@@ -73,7 +73,7 @@ class WeatherService {
   }
 };
 
-module.exports = WeatherService;
+export { WeatherService };
 
 // Тестування сервісу
 // (async () => {
