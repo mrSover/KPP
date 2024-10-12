@@ -34,11 +34,11 @@
         <h3>Hourly Forecast</h3>
         <div class="forecast-grid">
           <div v-for="hour in hourlyForecast" :key="hour.time_epoch" class="hour-box">
-            <p>{{ formatTime(hour.time_epoch) }}: {{ hour.temp_c }} °C</p>
+            <p>{{ formatTime(hour.time_epoch) }}: {{ hour.temp_c }} °C </p>
           </div>
         </div>
       </div>
-
+      <hr>
       <!-- Прогноз на 7 дней -->
       <div class="daily-forecast">
         <h3>7-Day Forecast</h3>
@@ -152,7 +152,7 @@ export default {
 
 .weather-box {
   font-size: 18px;
-  background: rgba(25, 27, 43, 0.1);
+  background: rgba(13, 14, 22, 0.2);
   border: 2px solid rgb(228, 228, 228,0.3);
   border-radius: 10px;
   padding: 10px;
@@ -163,11 +163,11 @@ export default {
 
 .search-container {
 
-  background: rgba(209, 193, 248, 0.25);
+  background: rgba(209, 193, 248, 0.2);
   border-radius: 10px;
   margin: 20px auto;
-  padding-bottom: 5px;
-  max-width: 400px;
+  padding-bottom: 10px;
+  max-width: 320px;
 }
 
 .hourly-forecast,
@@ -184,13 +184,16 @@ export default {
 
 .hour-box,
 .day-box {
-  background: rgba(168, 207, 116, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+
   border-radius: 8px;
   padding: 10px;
   padding-top: 15px;
   width: 120px;
-
+}
+.day-box {
+  background: rgba(69, 80, 55, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-left: 20px;
 }
 h2, h3 {
   margin: 20px 0;
@@ -204,11 +207,17 @@ h3 {
 p {
   color: rgb(224, 232, 243);
 }
+hr {
+  width: 50%;
+  height: 1px;
+  border: none;
+  background-color: rgba(196, 212, 255, 0.35);
+}
 footer {
 
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding-top: 20px;
+  padding: 20px 0px 5px 0px;
   color: rgb(234, 224, 243);
   bottom: 0;
   width: 100%;
