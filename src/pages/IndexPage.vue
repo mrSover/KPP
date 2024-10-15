@@ -204,6 +204,12 @@ export default {
               colors: 'white',
             }
           },
+          crosshairs: {
+            show: false
+          },
+          tooltip: {
+            enabled: false
+          }
         },
         dataLabels: {
           enabled: true
@@ -336,7 +342,8 @@ export default {
 .day-box {
   background: rgba(69, 80, 55, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  margin-left: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 .day-box.selected {
   background-color: rgba(234, 234, 234, 0.2);
