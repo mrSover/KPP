@@ -288,6 +288,7 @@ export default {
   max-width: 100%;
   padding: 20px;
   text-align: center;
+  min-height: 100vh;
 }
 
 .weather-info {
