@@ -155,7 +155,7 @@ export default {
     getButtonLabel(day) {
       return `
         ${this.formatDate(day.date_epoch)}
-        <img src="${day.day.condition.icon}" alt="Weather Icon" class="weather-icon" />
+        <img src="http:${day.day.condition.icon}" alt="Weather Icon" class="weather-icon" />
         ${day.day.maxtemp_c}° ${day.day.mintemp_c}°
         `;
     },
