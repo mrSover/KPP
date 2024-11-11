@@ -1,0 +1,5 @@
+{
+  "appId": "com.yourcompany.weatherapp",
+  "appName": "Weather Forecast",
+  "webDir": "www"
+}
