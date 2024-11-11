@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const OPENWEATHER_API_KEY = '3515522ce40225e94ec9b09d78ade6a4'
 const OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
-const WEATHERAPI_API_KEY = 'fa46a44952904c30ab4144302242110'
+const WEATHERAPI_API_KEY = '52ae5b12dd0e4f43abe140137241111'
 const WEATHERAPI_BASE_URL = 'http://api.weatherapi.com/v1'
 
 class WeatherService {
