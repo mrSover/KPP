@@ -46,17 +46,17 @@
         />
       </div>
 
-      <div class="chart-container">
+      <div>
         <apexchart 
-          width="960px"
-          height="350px"
+          width="100%"
+          height="150px"
           type="line" 
           :options="chartOptions" 
           :series="chartSeries">
         </apexchart>
       </div>
 
-      <div class="daily-forecast">
+      <div>
         <h3>7-Day Forecast</h3>
         <div>
           <q-btn
@@ -100,6 +100,7 @@ export default {
       activeTab: 'temperature', // Default active tab
       selectedDay: null,
       twoHourIntervals: [],
+      hourRange: 4,
     };
   },
   components: {
@@ -231,12 +232,12 @@ export default {
     },
 
     fillTemperatureChart(day) {
-      const twoHourIntervals = day.hour.filter((item, index) => index % 2 === 0);
+      const twoHourIntervals = day.hour.filter((item, index) => index % this.hourRange === 0);
 
       this.chartSeries = [{ name: 'Temperature', data: [] }];
 
       for (let i = 0; i < day.hour.length; ++i) {
-        if (i % 2 === 0) {
+        if (i % this.hourRange === 0) {
           this.chartSeries[0].data.push(day.hour[i].temp_c);
         }
       }
@@ -251,12 +252,12 @@ export default {
     },
 
     fillHumidityChart(day) {
-      const twoHourIntervals = day.hour.filter((item, index) => index % 2 === 0);
+      const twoHourIntervals = day.hour.filter((item, index) => index % this.hourRange === 0);
 
       this.chartSeries = [{ name: 'Humidity', data: [] }];
 
       for (let i = 0; i < day.hour.length; ++i) {
-        if (i % 2 === 0) {
+        if (i % this.hourRange === 0) {
           this.chartSeries[0].data.push(day.hour[i].humidity);
         }
       }
@@ -298,7 +299,6 @@ export default {
 }
 
 .weather-info {
-  display: flex;
   flex-direction: column;
 }
 
@@ -314,7 +314,7 @@ export default {
 .search-container {
   border-radius: 10px;
   margin: 30px auto;
-  width: 960px;
+  width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -379,12 +379,6 @@ hr {
   text-decoration: underline !important;
   text-decoration-color: rgb(224, 232, 243);
   text-underline-offset: 6px;
-}
-
-.chart-container {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
 }
 
 </style>
